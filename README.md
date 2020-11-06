@@ -24,14 +24,12 @@ composer install
 
 #### Paso 4
 
-```
-cp .env.example .env
-```
+Crea una base de datos con phpMyAdmin o con tu programa favorito
 
 #### Paso 5
 
 ```
-Crea una base de datos con phpMyAdmin o con tu programa favorito
+cp .env.example .env
 ```
 
 #### Paso 6
