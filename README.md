@@ -97,7 +97,7 @@ Comenta todo el código del archivo: multi-language-laravel-example/routes/web.p
 php artisan migrate
 ```
 
-#### Problema
+#### Problema
 
 ```
 Call to undefined function get_language_switcher_url() (View: /Users/edgar/Development/PHP/multi-language-laravel-example/resources/views/includes/menu.blade.php)
