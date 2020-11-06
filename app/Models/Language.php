@@ -13,7 +13,7 @@ class Language extends Model
 
     public static function getAvailableLanguages()
     {
-        $value = Cache::rememberForever('available_locales', function () {
+        $value = Cache::rememberForever('languages', function () {
             return self::select('name', 'locale')->get();
         });
         return $value;
@@ -21,7 +21,7 @@ class Language extends Model
 
     public static function getAvailableLocaleCodes()
     {
-        $value = Cache::rememberForever('available_locale_codes', function () {
+        $value = Cache::rememberForever('locale_codes', function () {
             $locale_codes = self::select('locale')->get();
             return Arr::pluck($locale_codes, 'locale');
         });
