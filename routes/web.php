@@ -1,15 +1,20 @@
 <?php
 
+// NOTA: Descomente el código si y solo si ya ejecutó las migraciones y los seeders
+
+/*
+
 use App\Http\Controllers\PostController;
 use App\Models\Language;
+use App\Models\Setting;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 $locale = request()->segment(1);
 $locale_codes = Language::getAvailableLocaleCodes();
-$default_locale = config('localization.site_default_locale');
+$default_locale = Setting::getSetting('site_default_locale');
 
-if (in_array($locale, $locale_codes) && $locale != $default_locale && config('localization.enable_multi_language_site')) {
+if (in_array($locale, $locale_codes) && $locale != $default_locale && Setting::getSetting('enable_multi_language_site')) {
     App::setLocale($locale);
 } else {
     App::setLocale($default_locale);
@@ -23,3 +28,5 @@ Route::group(array('prefix' => $locale), function () {
     Route::get('/', [PostController::class, 'index'])->name('blog.home');
     Route::get('/{slug}', [PostController::class, 'show'])->name('blog.post');
 });
+
+*/
