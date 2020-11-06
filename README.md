@@ -2,6 +2,8 @@
 
 Este es un ejemplo de como implementar Laravel en muchos idiomas. 
 
+![Captura 1](https://github.com/edgarjaviertec/multi-language-laravel-example/blob/main/capturas-de-pantalla/captura_1.png)
+
 ### Instalación
 
 #### Paso 1
