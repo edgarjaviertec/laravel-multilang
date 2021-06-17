@@ -1,77 +1,54 @@
-## Laravel multilenguaje 
+## Laravel multilenguaje
 
-Este es un ejemplo de como implementar Laravel en muchos idiomas. 
-
-![Captura 1](https://github.com/edgarjaviertec/multi-language-laravel-example/blob/main/capturas-de-pantalla/captura_1.png)
+Este es un ejemplo de como implementar Laravel en varios idiomas.
 
 ### Instalación
 
-#### Paso 1
-
-```
-git clone https://github.com/edgarjaviertec/multi-language-laravel-example.git
-```
-
-#### Paso 2
-
-```
-cd multi-language-laravel-example 
-```
-
-#### Paso 3
+### Paso 1
 
 ```
 composer install
-```
+````
 
-#### Paso 4
-
-Crea una base de datos con phpMyAdmin o con tu programa favorito
-
-#### Paso 5
-
-```
-cp .env.example .env
-```
-
-#### Paso 6
-
-Localiza el archivo multi-language-laravel-example/.env y agrega los datos de tu base de datos
-
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=blog_multilang
-DB_USERNAME=root
-DB_PASSWORD=root
-```
-
-#### Paso 7
-
-```
-php artisan migrate
-```
-
-#### Paso 8
-
-```
-php artisan db:seed
-```
-
-#### Paso 9
-
-Localiza el archivo multi-language-laravel-example/routes/web.php y descomenta el código
-
-#### Paso 10
+### Paso 2
 
 ```
 php artisan key:generate
+````
+
+### Paso 3
+
+Crea tu archivo .env usando de ejemplo el archivo .env.example:
+
 ```
+cp .env.example .env
+````
 
-#### Paso 11
+### Paso 4
 
-Configura y ejecuta tu servidor web apuntando a la carpeta multi-language-laravel-example/public
+Modifica tu archivo .env con la configuración de tu base de datos.
+
+### Paso 5
+
+```
+php artisan migrate
+````
+
+### Paso 6
+
+```
+php artisan db:seed
+````
+
+### Capturas de pantalla
+
+#### Listado de páginas
+
+![Captura de patalla de la página de inicio](screenshots/homepage.png)
+
+#### Página interior
+
+![Captura de patalla de una página](screenshots/single-page.png)
 
 ### Problemas conocidos
 
@@ -91,7 +68,7 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravel_multilang.lan
 
 #### Solución
 
-Comenta todo el código del archivo: multi-language-laravel-example/routes/web.php y ejecuta
+Comenta todo el código del archivo: routes/web.php y ejecuta el siiguiente comando:
 
 ```
 php artisan migrate
@@ -105,12 +82,8 @@ Call to undefined function get_language_switcher_url() (View: /Users/edgar/Devel
 
 #### Solución
 
-Ejecuta lo siguiente:
+Ejecuta el comando siguiente:
 
 ```
 composer dumpautoload
 ```
-
-
-
-
