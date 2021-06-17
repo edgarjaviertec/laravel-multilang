@@ -6,6 +6,10 @@ use App\Models\Setting;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
+if (!Schema::hasTable('languages')) {
+    return;
+}
+
 $locale = request()->segment(1);
 $locale_codes = Language::getAvailableLocaleCodes();
 $default_locale = Setting::getSetting('site_default_locale');
