@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\Cache;
 
 class Language extends Model
 {
@@ -13,18 +12,12 @@ class Language extends Model
 
     public static function getAvailableLanguages()
     {
-        $value = Cache::rememberForever('languages', function () {
-            return self::select('name', 'locale')->get();
-        });
-        return $value;
+        return self::select('name', 'locale')->get();
     }
 
     public static function getAvailableLocaleCodes()
     {
-        $value = Cache::rememberForever('locale_codes', function () {
-            $locale_codes = self::select('locale')->get();
-            return Arr::pluck($locale_codes, 'locale');
-        });
-        return $value;
+        $locale_codes = Language::select('locale')->get();
+        return Arr::pluck($locale_codes, 'locale');
     }
 }
