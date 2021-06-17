@@ -1,9 +1,5 @@
 <?php
 
-// NOTA: Descomente el código si y solo si ya ejecutó las migraciones y los seeders
-
-/*
-
 use App\Http\Controllers\PostController;
 use App\Models\Language;
 use App\Models\Setting;
@@ -28,5 +24,3 @@ Route::group(array('prefix' => $locale), function () {
     Route::get('/', [PostController::class, 'index'])->name('blog.home');
     Route::get('/{slug}', [PostController::class, 'show'])->name('blog.post');
 });
-
-*/
