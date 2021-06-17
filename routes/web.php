@@ -6,8 +6,13 @@ use App\Models\Setting;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
-if (!Schema::hasTable('languages')) {
-    return;
+try {
+    if (!Schema::hasTable('languages')) {
+        return;
+    }
+} catch (Throwable $e) {
+    report($e);
+    return false;
 }
 
 $locale = request()->segment(1);
