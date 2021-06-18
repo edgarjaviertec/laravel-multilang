@@ -11,5 +11,4 @@ class Post extends Model
     use HasFactory, Translatable;
 
     public $translatedAttributes = ['title', 'slug', 'content'];
-    protected $fillable = ['online'];
 }

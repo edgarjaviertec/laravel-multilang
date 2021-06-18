@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Post;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Str;
 
 class PostTranslationSeeder extends Seeder
@@ -131,6 +132,7 @@ class PostTranslationSeeder extends Seeder
             ]
         ];
         foreach ($posts as $translations) {
+            App::setLocale('en');
             $post = new Post();
             $post->online = true;
             $post->save();
