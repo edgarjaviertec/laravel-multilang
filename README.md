@@ -12,21 +12,22 @@ composer install
 
 ### Paso 2
 
-```
-php artisan key:generate
-````
-
-### Paso 3
-
 Crea tu archivo .env usando de ejemplo el archivo .env.example:
 
 ```
 cp .env.example .env
 ````
 
-### Paso 4
+### Paso 3
 
 Modifica tu archivo .env con la configuración de tu base de datos.
+
+
+### Paso 4
+
+```
+php artisan key:generate
+````
 
 ### Paso 5
 
