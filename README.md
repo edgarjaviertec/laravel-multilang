@@ -68,10 +68,24 @@ SQLSTATE[42S02]: Base table or view not found: 1146 Table 'laravel_multilang.lan
 
 #### Solución
 
-Comenta todo el código del archivo: routes/web.php y ejecuta el siiguiente comando:
+Comenta todo el código del archivo: routes/web.php y ejecuta el siguiente comando:
 
 ```
 php artisan migrate
+```
+
+#### Problema
+
+```
+Return value of Astrotomic\Translatable\Locales::current() must be of the type string, null returned
+```
+
+#### Solución
+
+Vuelve a ejecutar el comando:
+
+```
+php artisan db:seed
 ```
 
 #### Problema
